@@ -1,12 +1,26 @@
 import * as express from 'express'
+import routes from './routes'
 
-const app = express()
-const port = process.env.PORT || 1337
+class App {
+  public app: express.Application
+  private port: number
 
-app.use('/', (req : express.Request, res : express.Response) => {
-  return res.json({data: 'hello world'})
-})
+  constructor() {
+    this.app = express()
+    this.port = process.env.PORT || 1337
+    this.configureApi()
+  }
 
-app.listen(port, () => {
-  console.log(`Listening on ${port}`)
-})
+  public run(): void {
+    this.app.listen(this.port, () => {
+      console.log(`Listening on ${this.port}`)
+    })
+  }
+
+  private configureApi(): void {
+    this.app.use(routes)
+  }
+}
+
+const app = new App()
+app.run()

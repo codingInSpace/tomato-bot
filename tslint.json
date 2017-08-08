@@ -9,6 +9,7 @@
   ],
   "rules": {
     "no-console": false,
+    "no-default-export": false,
     "semicolon": [true, "never"],
     "mocha-no-side-effect-code": false,
     "missing-jsdoc": false,
@@ -16,6 +17,8 @@
     "export-name": false,
     "promise-function-async": false,
     "no-void-expression": false,
+    "no-trailing-whitespace": false,
+    "newline-before-return": false,
     "typedef": [
       true,
       "parameter",
