@@ -13,11 +13,14 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     "noImplicitAny": false,
     "noImplicitThis": false,
     "strictNullChecks": false,
-    "declaration": true
+    "declaration": true,
+    "types": [
+      "express"
+    ]
   },
   "include": [
     "src/**/*",
